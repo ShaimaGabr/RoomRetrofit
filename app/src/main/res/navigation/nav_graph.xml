@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.roomretrofit.ui.fragment.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_mealDetailFragment"
+            app:destination="@id/mealDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_fragmentItemCategory"
+            app:destination="@id/fragmentItemCategory" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.example.roomretrofit.ui.fragment.Favorite"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/category"
+        android:name="com.example.roomretrofit.ui.fragment.Category"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/mealDetailFragment"
+        android:name="com.example.roomretrofit.MealDetailFragment"
+        android:label="fragment_meal_detail"
+        tools:layout="@layout/fragment_meal_detail" />
+    <fragment
+        android:id="@+id/fragmentItemCategory"
+        android:name="com.example.roomretrofit.FragmentItemCategory"
+        android:label="fragment_item_category"
+        tools:layout="@layout/fragment_item_category" />
+</navigation>
